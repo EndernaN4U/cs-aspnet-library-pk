@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Users</title>
+    <link rel="stylesheet" href="./main.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -13,8 +14,8 @@
                 <asp:Button ID="BackBtn" runat="server" Text="Back" OnClick="BackBtn_Click" />
             </div>
             <div>
-                <asp:GridView ID="UsersGrid" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCommand="BooksGrid_RowCommand">
-                    <AlternatingRowStyle BackColor="White" />
+                <asp:GridView ID="UsersGrid" runat="server" CellPadding="4" ForeColor="#FFFFFF" GridLines="None" OnRowCommand="BooksGrid_RowCommand">
+                    <AlternatingRowStyle />
                     <Columns>
                         <asp:ButtonField ButtonType="Link" CommandName="Delete" Text="Delete"/>
                         <asp:ButtonField ButtonType="Link" CommandName="Promote" Text="Promote" />

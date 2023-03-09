@@ -232,9 +232,9 @@
     <Content Include="Edit.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Register.aspx" />
+    <Content Include="main.css" />
     <Content Include="Users.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
     <Content Include="login.aspx" />
     <Content Include="ViewBooks.aspx" />
   </ItemGroup>
@@ -277,13 +277,6 @@
     </Compile>
     <Compile Include="Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

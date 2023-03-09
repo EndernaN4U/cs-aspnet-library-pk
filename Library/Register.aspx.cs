@@ -15,7 +15,7 @@ namespace Library
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["connstr"] == null) Response.Redirect("Connection.aspx");
-        }
+        }   
 
         protected void CancelBtn_Click(object sender, EventArgs e)
         {

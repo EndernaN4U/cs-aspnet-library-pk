@@ -4,11 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Add New</title>
+    <link rel="stylesheet" href="./main.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="container-conn">
             <div>
                 <asp:Label ID="Label1" runat="server" Text="Author"></asp:Label>
                 <asp:TextBox ID="Author" runat="server"></asp:TextBox>
@@ -37,8 +38,12 @@
                 <asp:Label ID="Label7" runat="server" Text="Description"></asp:Label>
                 <asp:TextBox ID="Description" runat="server"></asp:TextBox>
             </div>
-            <asp:Button ID="Add" runat="server" Text="Add" OnClick="Add_Click" />
-            <asp:Button ID="Cancel" runat="server" Text="Back" OnClick="Cancel_Click" />
+            <div class="Conn-Btn">
+                <asp:Button ID="Add" runat="server" Text="Add" OnClick="Add_Click" />
+            </div>
+            <div class="Conn-Btn">
+                <asp:Button ID="Cancel" runat="server" Text="Back" OnClick="Cancel_Click" />
+            </div>
             <asp:Label ID="Errors" runat="server" Text=""></asp:Label>
         </div>
     </form>

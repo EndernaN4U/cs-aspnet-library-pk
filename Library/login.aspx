@@ -4,27 +4,28 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Login</title>
+    <link rel="stylesheet" href="./main.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="container-conn">
             <div>
                 <asp:Label ID="Label1" runat="server" Text="Login"></asp:Label>
                 <asp:TextBox ID="LoginTxt" runat="server"></asp:TextBox>
             </div>
             <div>
                 <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
-                <asp:TextBox ID="PasswordTxt" runat="server"></asp:TextBox>
+                <asp:TextBox ID="PasswordTxt" runat="server" TextMode="Password"></asp:TextBox>
             </div>
-            <div>
+            <div class="Conn-Btn">
                 <asp:Button ID="LoginBtn" runat="server" Text="Login" OnClick="LoginBtn_Click" />
             </div>
             <div>
                 <asp:Label ID="ErrorsTxt" runat="server" Text=""></asp:Label>
                 <asp:Button ID="Register" runat="server" Text="Register" OnClick="Register_Click" />
             </div>
-            <div>
+            <div class="Conn-Btn">
                 <asp:Button ID="BackConn" runat="server" Text="Back to Connection" OnClick="BackConn_Click" />
             </div>
         </div>

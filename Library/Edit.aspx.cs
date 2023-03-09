@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -49,6 +50,35 @@ namespace Library
 
         protected void EditBtn_Click(object sender, EventArgs e)
         {
+            string author = Author.Text,
+               title = Title.Text,
+               date = Date.Text,
+               isbn = ISBN.Text,
+               format = Format.Text,
+               pages = Pages.Text,
+               description = Description.Text;
+
+            if (author == "" || title == "" || date == "" || isbn == "" || format == "" || pages == "" || description == "")
+            {
+                Errors.Text = "You need to fill text fields to continue!";
+                return;
+            }
+            if (!new Regex(@"^[0-9]{2}[-][0-9]{2}[-][0-9]{4}$").IsMatch(date))
+            {
+                Errors.Text = "Date should be in format dd-mm-yyyy";
+                return;
+            }
+            if (format.Length > 3)
+            {
+                Errors.Text = "Format shouldn't be longer than 3 chars!";
+                return;
+            }
+            if (!new Regex(@"^[0-9]*$").IsMatch(pages))
+            {
+                Errors.Text = "Pages should be a number!";
+                return;
+            }
+
             MySqlConnection conn = Global.MakeConnSingle(Session["connstr"].ToString());
             MySqlCommand comm = conn.CreateCommand();
             comm.CommandText = $"UPDATE books" +

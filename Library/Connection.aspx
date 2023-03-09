@@ -4,11 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Connection</title>
+    <link rel="stylesheet" href="./main.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div
+        <div class="container-conn">
             <div>
                 <asp:Label ID="Label1" runat="server" Text="Server"></asp:Label><asp:TextBox ID="ServerTxt" runat="server" Text="localhost"></asp:TextBox>
             </div>
@@ -19,9 +20,9 @@
                 <asp:Label ID="Label3" runat="server" Text="User"></asp:Label><asp:TextBox ID="UserTxt" runat="server" Text="root"></asp:TextBox>
             </div>
             <div>
-                <asp:Label ID="Label4" runat="server" Text="Password"></asp:Label><asp:TextBox ID="PasswordTxt" runat="server"></asp:TextBox>
+                <asp:Label ID="Label4" runat="server" Text="Password"></asp:Label><asp:TextBox ID="PasswordTxt" runat="server" TextMode="Password"></asp:TextBox>
             </div>
-            <div>
+            <div class="Conn-Btn">
                 <asp:Button ID="Connect" runat="server" Text="Connect" OnClick="Connect_Click" />
             </div>
             
